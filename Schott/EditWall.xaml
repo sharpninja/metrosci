@@ -1,0 +1,25 @@
+﻿<Page
+    x:Class="Schott.MainPage"
+    IsTabStop="false"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Schott"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:my="using:Skeen"
+    mc:Ignorable="d">
+    <Page.BottomAppBar>
+        <AppBar IsTabStop="False">
+            <StackPanel Orientation="Horizontal" Margin="10,0">
+                <TextBox x:Name="TxtSearch" KeyDown="TxtSearch_KeyDown" KeyUp="TxtSearch_KeyUp" VerticalAlignment="Center" HorizontalAlignment="Left" Width="200" Margin="10,0" TabIndex="2"/>
+                <Button x:Name="BtnFind" Content="Find" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0" Click="BtnFind_Click" TabIndex="3"/>
+                <Button x:Name="BtnLoad" Content="Load File" HorizontalAlignment="Left" VerticalAlignment="Center" Click="BtnLoad_Click" Margin="10,0" TabIndex="4"/>
+                <Button x:Name="BtnSave" Content="Save File" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,23" TabIndex="4" Click="BtnSave_Click"/>
+            </StackPanel>
+        </AppBar>
+    </Page.BottomAppBar>
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <my:SkeenControl x:Name="SkeenMain" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Auto" />
+    </Grid>
+</Page>

@@ -1,0 +1,25 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Skeen">
+
+    <Style TargetType="local:SkeenControl">
+        <Setter Property="IsHitTestVisible" Value="true"/>
+        <Setter Property="IsEnabled" Value="true"/>
+        <Setter Property="IsTabStop" Value="true"/>
+        <Setter Property="TabIndex" Value="5"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate x:Name="Skeener" TargetType="local:SkeenControl" >
+                    <ScrollViewer x:Name="ScrollView" ZoomMode="Disabled" HorizontalAlignment="Stretch" VerticalAlignment="Top">
+                        <Border x:Name="DrawSurface"
+                            Height="2000"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}">
+                        </Border>
+                    </ScrollViewer>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>
